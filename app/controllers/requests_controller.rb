@@ -8,8 +8,9 @@ class RequestsController < ApplicationController
   def create
     @request = Request.new(request_params)
     if @request.valid?
+      # add error handling for errors like 404, 500, etc.
       doc = Nokogiri::XML(open(url @request))
-      selection = { titles: doc.xpath("//title_without_series"),
+      response = { titles: doc.xpath("//title_without_series"),
                     names: doc.xpath("//name"),
                     links: doc.xpath("//book//link"),
                     image: doc.xpath("//book//image_url")}
