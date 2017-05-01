@@ -11,7 +11,8 @@ class RequestsController < ApplicationController
       doc = Nokogiri::XML(open(url @request))
       selection = { titles: doc.xpath("//title_without_series"),
                     names: doc.xpath("//name"),
-                    links: doc.xpath("//book//link") }
+                    links: doc.xpath("//book//link"),
+                    image: doc.xpath("//book//image_url")}
       sleep(1)
       #flash[:notice] = 'Request recieved. Check your email.'
     else
