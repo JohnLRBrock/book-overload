@@ -4,6 +4,7 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
+  <h1>Information courtesy of <%= link_to 'goodreads', 'www.goodreads.com' %></h1>
     <ul>
       <% @books.each do |book| %>
         <li>
@@ -14,6 +15,6 @@
         </li>
       <% end %>
     </ul>
-    <p><%= link_to 'Book Overload', root_url %></p>
+    <h3><%= link_to 'Book Overload', root_url %></h3>
   </body>
 </html>
