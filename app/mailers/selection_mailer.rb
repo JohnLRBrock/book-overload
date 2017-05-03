@@ -1,7 +1,7 @@
 class SelectionMailer < ApplicationMailer
-  def selection_email(request, selection)
-    @request = request
-    @selection = selection
-    mail(to: @request.email, subject: "Here's Your Selection of Books")
+  def selection_email(books, email)
+    puts "mail is being sent. #{books}"
+    @books = books
+    mail(to: email, subject: "Here's Your Selection of Books")
   end
 end

@@ -1,3 +1,6 @@
+# Model to handle requests to the goodreads api
+# Doesn't inheret from Active Record
+# includes Active Model in order to have access to validators and #valid?
 class Request
   include ActiveModel::Model
   attr_accessor :id, :email, :quantity

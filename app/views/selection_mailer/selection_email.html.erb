@@ -5,7 +5,14 @@
   </head>
   <body>
     <ul>
-      Loop through every book in the response displaying the title of the book, the author's name, the link to the book's goodreads page, and an image of it's cover.
+      <% @books.each do |book| %>
+        <li>
+          Title: <%= book.title %>
+          Name: <%= book.name %>
+          Link: <%= link_to 'Goodreads page', book.link %>
+          <%= image_tag book.image %>
+        </li>
+      <% end %>
     </ul>
     <p>include a link to the website</p>
   </body>
