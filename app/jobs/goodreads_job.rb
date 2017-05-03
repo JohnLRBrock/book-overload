@@ -6,11 +6,9 @@ class GoodreadsJob < ApplicationJob
   queue_as :default
 
   def perform(request)
-    puts "Job is being performed"
     doc = Nokogiri::XML(open(url request))
     selection = Selection.new(xml: doc, quantity: request.quantity)
-    puts "#{selection.books}"
-    SelectionMailer.selection_email(selection.books, request.email)
+    SelectionMailer.selection_email(selection.books, request.email).deliver_now
     # only one api request can be made to Goodreads per second
     sleep(1)
   end

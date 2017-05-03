@@ -10,8 +10,8 @@ class Selection
       params = {
                 title: xml.xpath("//title_without_series")[i].content,
                 name:  xml.xpath("//name")[i].content,
-                link:  xml.xpath("//book//link")[i].content,
-                image: xml.xpath("//book//image_url")[i].content
+                link:  xml.xpath("//book/link")[i].content,
+                image: xml.xpath("//book/image_url")[i].content
                }
       books << Book.new(params)
     end
