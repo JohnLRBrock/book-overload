@@ -3,7 +3,7 @@
 # includes Active Model in order to have access to validators and #valid?
 class Request
   include ActiveModel::Model
-  attr_accessor :id, :email, :quantity
+  attr_accessor :id, :email, :quantity, :remember_me
 
   validates_format_of :email, with: /.+@.+/
   validates_format_of :id, with: /[0-9]+/

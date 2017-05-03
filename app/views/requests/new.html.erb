@@ -12,17 +12,21 @@
 
   <div class="field">
     <%= f.label :id, 'Goodreads id' %>
-    <%= f.text_field :id %>
+    <%= f.text_field :id, value: "#{@id}" %>
   </div>
   <div class="field">
     <%= f.label :email %>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, value: "#{@email}" %>
   </div>
   <div class="field">
     <%= f.label :quantity %>
-    <%= f.number_field :quantity %>
+    <%= f.select :quantity, (1..10) %>
   </div>
-  <div class="actions">
+  <div>
+    <%= f.label :remember_me %>
+    <%= f.check_box :remember_me %>
+  </div>
+  <div class="action">
    <%= f.submit :send %>
  </div>
 <% end %>
