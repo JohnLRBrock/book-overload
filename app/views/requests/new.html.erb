@@ -1,3 +1,7 @@
+<p>Too many books on your to-read shelf? Paralyzed by indecision? Fill in this form and you'll recieve a selection of random books from your to-read shelf delivered right to your email.<p>
+<p>Your goodreads id is the numbers in the url of your goodreads profile. Ex: www.goodreads.com/user/show/<strong>XXXXXX</strong>-name.</p>
+<p>I'll never spam you or give away your email.<p>
+
 <%= form_for @request do |f| %>
   <% if @request.errors.any? %>
     <div id="error_explanation">
@@ -19,7 +23,7 @@
     <%= f.text_field :email, value: "#{@email}" %>
   </div>
   <div class="field">
-    <%= f.label :quantity %>
+    <%= f.label :how_many? %>
     <%= f.select :quantity, (1..10) %>
   </div>
   <div>

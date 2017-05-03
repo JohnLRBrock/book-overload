@@ -8,11 +8,10 @@
     <ul>
       <% @books.each do |book| %>
         <li>
-          Title: <%= book.title %>
-          Name: <%= book.name %>
-          Link: <%= link_to 'Goodreads page', book.link %>
-          <%= image_tag book.image %>
-        </li>
+          <h3><i><%= book.title %></i> by <%= book.name %></h3>
+          <%= link_to 'Goodreads page', book.link %><br>
+          <%= image_tag book.image %><br>
+        </li><br>
       <% end %>
     </ul>
     <h3><%= link_to 'Book Overload', root_url %></h3>
