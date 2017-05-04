@@ -2,9 +2,9 @@ Here are your books, information courtesy of goodreads!
 ===============================================
  
 <% @books.each do |book| %>
-* Title: <%= book.title %>
-  Name: <%= book.name %>
-  Link: <%= book.link %> 
+* Title: <%= book[:title] %>
+  Name: <%= book[:name] %>
+  Link: <%= book[:link] %> 
 <% end %>
 
 <%= root_url %>

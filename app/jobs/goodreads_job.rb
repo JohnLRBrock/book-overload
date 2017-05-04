@@ -10,7 +10,7 @@ class GoodreadsJob < ApplicationJob
     $my_lock.lock
     doc = Nokogiri::XML(open(url request))
     selection = Selection.new(xml: doc, quantity: request.quantity)
-    SelectionMailer.selection_email(selection.books, request.email).deliver_now
+    SelectionMailer.selection_email(selection.books, request.email).deliver_later
     # only one api request can be made to Goodreads per second
     sleep(1)
     $my_lock.unlock
