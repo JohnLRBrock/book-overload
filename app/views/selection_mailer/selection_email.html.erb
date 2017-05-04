@@ -8,10 +8,12 @@
     <ul>
       <% @books.each do |book| %>
         <li>
-          <h3><i><%= book[:title] %></i> by <%= book[:name] %></h3>
-          <%= link_to 'Goodreads page', book[:link] %><br>
-          <%= image_tag book[:image], alt: "#{book[:title]} by #{book[:name]}" %><br>
-        </li><br>
+          <figure>
+            <%= image_tag book[:image], alt: "#{book[:title]} by #{book[:name]}" %>
+            <figcaption><i><%= book[:title] %></i> by <%= book[:name] %></figcaption>
+            <%= link_to 'Goodreads page', book[:link] %>
+          </figure>
+        </li>
       <% end %>
     </ul>
     <h3><%= link_to 'Book Overload', root_url %></h3>
