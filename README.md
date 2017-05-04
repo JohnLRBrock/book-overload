@@ -5,4 +5,5 @@ It uses Nokogirir and open URI to contact the goodreads api, active jobs with th
 The style is sakura which can be found here https://github.com/oxalorg/sakura/blob/master/README.md
 
 www.book-overload.herokuapp.com
+
 www.johnbrock.io
