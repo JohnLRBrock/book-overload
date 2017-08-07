@@ -8,6 +8,6 @@ This project presented challenges that I hadn't been exposed to before, such as 
 
 The style is sakura which can be found here https://github.com/oxalorg/sakura/blob/master/README.md
 
-www.book-overload.herokuapp.com
+https://book-overload.herokuapp.com/
 
 www.johnbrock.io
