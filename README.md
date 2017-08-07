@@ -1,6 +1,6 @@
 I'm addicted to books. I always have one with me and I can't leave a bookstore without making a purchase. My enthusiasm means that my to-read shelf is encumbered. With almost 600 books, I experience choice overload and can't decide what to read next.
 
-This app solves that problem by emailing the user a random set of books from their to-read shelf. Users are introduced to books that they were interested in all over again and in more maneagable quantities.
+This app solves that problem by emailing the user a random set of books from their to-read shelf. Users are introduced to books that they were interested in all over again and in more manageable quantities.
 
 This app uses a Rails backend, Nokogiri and open URI to contact the goodreads api, Activejobs with the suckerpunch backend and a mutex to make sure only one request is made at a time, and ActionMailer with sendgrid to send emails.
 
