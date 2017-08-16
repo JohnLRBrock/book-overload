@@ -4,7 +4,7 @@ This app solves that problem by emailing the user a random set of books from the
 
 This app uses a Rails backend, Nokogiri and open URI to contact the goodreads api, Activejobs with the suckerpunch backend and a mutex to make sure only one request is made at a time, and ActionMailer with sendgrid to send emails.
 
-This project presented challenges that I hadn't been exposed to before, such as limitting API requests across all users. The project taught me how to learn about new technologies and how to apply problem solving skills to novel problems in a practical context.
+This project presented challenges that I hadn't been exposed to before, such as limiting API requests across all users. The project taught me how to learn about new technologies and how to apply problem solving skills to novel problems in a practical context.
 
 The style is sakura which can be found here https://github.com/oxalorg/sakura/blob/master/README.md
 
