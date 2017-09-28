@@ -1,6 +1,5 @@
-<p>Too many books on your to-read shelf? Paralyzed by indecision? Fill in this form and you'll recieve a selection of random books from your to-read shelf delivered right to your email.<p>
-<p>Your goodreads id is the numbers in the url of your goodreads profile. Ex: www.goodreads.com/user/show/<strong>XXXXXX</strong>-name.</p>
-<p>I'll never spam you or give away your email.<p>
+<h1>Book Overload</h1>
+<p>Get a selection of random books from your Goodreads to-read shelf sent to your email.<p>
 
 <%= form_for @request do |f| %>
   <% if @request.errors.any? %>
@@ -16,21 +15,29 @@
 
   <div class="field">
     <%= f.label :id, 'Goodreads id', class: "field_label" %>
+    <i id="goodreads-id-tooltip" class="fa fa-question-circle" aria-hidden="true"
+    title="Your goodreads id is the numbers in the url of your goodreads profile."></i>
+    <br>
     <%= f.text_field :id, value: "#{@id}" %>
   </div>
   <div class="field">
     <%= f.label :email, class: "field_label" %>
+    <i id="email-tooltip" class="fa fa-question-circle" aria-hidden="true" title="I don't store or give away your email."></i>
+    <br>
     <%= f.email_field :email, value: "#{@email}" %>
   </div>
   <div class="field">
     <%= f.label :how_many?, class: "field_label" %>
-    <%= f.select :quantity, (1..10) %>
+    <br>
+    <%= f.select :quantity, (1..10), :selected => 5 %>
   </div>
   <div>
-    <%= f.check_box :remember_me %>
     <%= f.label :remember_me %>
+    <br>
+    <%= f.check_box :remember_me %>
   </div>
   <div class="action">
-   <%= f.submit :send %>
- </div>
+    <%= f.submit :send %>
+  </div>
+
 <% end %>

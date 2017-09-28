@@ -1,6 +1,7 @@
 class RequestsController < ApplicationController
   require 'nokogiri'
   require 'open-uri'
+
   def new
     @request = Request.new
     @id = cookies.permanent[:id]
@@ -10,7 +11,7 @@ class RequestsController < ApplicationController
   def create
     @request = Request.new(request_params)
     if @request.remember_me == "1"
-      cookies.permanent[:id] = @request.id 
+      cookies.permanent[:id] = @request.id
       cookies.permanent[:email] = @request.email
     end
     if @request.valid?
